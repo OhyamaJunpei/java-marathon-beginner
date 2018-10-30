@@ -9,6 +9,10 @@ package jp.co.sample.domain;
  */
 public class User {
 	
+	/** id */
+	private Integer id;
+	
+
 	/** 名前 */
 	private String name;
 	/** 年齢 */
@@ -17,6 +21,12 @@ public class User {
 	private String address;
 	
 	//getter,setter
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
