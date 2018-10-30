@@ -33,5 +33,19 @@ public class SearchController {
 	}
 	
 	
+	/**
+	 * UserDaoのload()メソッドを使って検索して
+	 * 出力画面を表示
+	 * 
+	 * @return 出力画面
+	 */
+	@RequestMapping("/output")
+	public String output(Integer id) {
+		
+		dao.load(id);
+		return "userinfoview";
+	}
+	
+	
 	
 }
