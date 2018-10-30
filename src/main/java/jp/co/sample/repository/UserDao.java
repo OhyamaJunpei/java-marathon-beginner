@@ -40,6 +40,7 @@ public class UserDao {
 	 * 
 	 * @param id User1のid
 	 * @return 検索されたuser
+	 * 
 	 */
 	public User1 load(Integer id) {
 		
