@@ -3,3 +3,8 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+  datasource:
+    url:  jdbc:postgresql://localhost/5432
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
