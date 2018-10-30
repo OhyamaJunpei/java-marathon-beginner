@@ -2,6 +2,8 @@ package jp.co.sample.domain;
 
 
 /**
+ * ユーザ情報を表すドメイン.
+ * 
  * @author ohyama
  *
  */

@@ -12,15 +12,15 @@
 <table>
 	<tr>
 		<td>名前：</td>
-		<td><c:out value="${name }"/></td>
+		<td><c:out value="${user.name}"/></td>
 	</tr>
 	<tr>
 		<td>年齢：</td>
-		<td><c:out value="${age }"/>歳</td>
+		<td><c:out value="${user.age}"/>歳</td>
 	</tr>
 	<tr>
 		<td>住所：</td>
-		<td><c:out value="${address }"/></td>
+		<td><c:out value="${user.address}"/></td>
 	</tr>
 
 </table>

@@ -9,7 +9,7 @@
 <body>
 
 ようこそ<br>
-<c:out value="${name }"/>さん
+<c:out value="${name}"/>さん
 
 </body>
 </html>
