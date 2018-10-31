@@ -25,7 +25,7 @@ public class UserDao {
 	private NamedParameterJdbcTemplate template;
 	
 	/** RowMapperを定義 */
-	private static final RowMapper<User1> EMPLOYEE_ROW_MAPPER = (rs, i) -> {
+	private static final RowMapper<User1> USER1_ROW_MAPPER = (rs, i) -> {
 		User1 user = new User1();
 		user.setId(rs.getInt("id"));
 		user.setName(rs.getString("name"));
@@ -44,11 +44,11 @@ public class UserDao {
 	 */
 	public User1 load(Integer id) {
 		
-		String sql = "SELECT name, age, address FROM info WHERE id=:id";
+		String sql = "SELECT id, name, age, address FROM info WHERE id=:id";
 		
 		SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
 		
-		User1 user = template.queryForObject(sql, param, EMPLOYEE_ROW_MAPPER);
+		User1 user = template.queryForObject(sql, param, USER1_ROW_MAPPER);
 		
 		return user;
 		
