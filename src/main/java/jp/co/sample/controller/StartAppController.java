@@ -16,7 +16,7 @@ import jp.co.sample.domain.Item;
 
 
 /**
- * 
+ * 初期画面を表示するコントローラ.
  * 
  * @author junpei.oyama
  *
@@ -32,6 +32,13 @@ public class StartAppController {
 	@Autowired
 	private ServletContext application;
 	
+	
+	/**
+	 * 商品をリストに入れて初期画面を表示.
+	 * 
+	 * @param model リクエストスコープ
+	 * @return 初期画面
+	 */
 	@RequestMapping("/index")
 	public String index(Model model) {
 		
