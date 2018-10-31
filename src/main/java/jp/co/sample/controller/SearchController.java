@@ -2,8 +2,10 @@ package jp.co.sample.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import jp.co.sample.domain.User1;
 import jp.co.sample.repository.UserDao;
 
 
@@ -40,9 +42,16 @@ public class SearchController {
 	 * @return 出力画面
 	 */
 	@RequestMapping("/output")
-	public String output(Integer id) {
+	public String output(Integer id, Model model) {
 		
-		dao.load(id);
+		User1 user = new User1(); 
+		user = dao.load(id);
+		user.getName();
+		user.getAge();
+		user.getAddress();
+		
+		model.addAttribute("user", user);
+		
 		return "userinfoview";
 	}
 	

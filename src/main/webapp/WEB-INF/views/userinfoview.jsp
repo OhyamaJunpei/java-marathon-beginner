@@ -10,9 +10,9 @@
 
 <h1>詳細情報</h1>
 
-名前：<c:out value="${user.name }"/>様
-年齢：<c:out value="${user.age }"/>歳
-住所：<c:out value="${user.address }"/>
+名前：<c:out value="${user.name}"/>様
+年齢：<c:out value="${user.age}"/>歳
+住所：<c:out value="${user.address}"/>
 
 </body>
 </html>
