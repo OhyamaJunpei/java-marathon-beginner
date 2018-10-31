@@ -53,8 +53,8 @@ public class StartAppController {
 		
 		application.setAttribute("itemList", itemList);
 		
-		List<Item> itemList1 = new LinkedList<>();
-		session.setAttribute("itemList1", itemList1);
+		List<Item> cartList = new LinkedList<>();
+		session.setAttribute("cartList", cartList);
 		
 		int total = 0;
 		model.addAttribute("total", total);
