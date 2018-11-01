@@ -11,41 +11,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jp.co.sample.domain.Item;
 
-
-/**
- * 商品をカートに入れるコントローラ.
- * 
- * @author junpei.oyama
- *
- */
 @Controller
-@RequestMapping("/insert")
-public class InsertController {
-	
+@RequestMapping("/delete")
+public class DeleteController {
+
 	@Autowired
 	private ServletContext application;
 
 	@Autowired
 	private HttpSession session;
 	
-	
-	/**
-	 * 指定されたindex番号のitemをcartListに入れる.
-	 * 
-	 * @param index itemの番号
-	 * @return　合計金額を計算するクラス
-	 */
-	@RequestMapping("/inCart")
-	public String inCart(int index) {
+	@RequestMapping("/outCart")
+	public String outCart(int index) {
 		@SuppressWarnings("unchecked")
 		List<Item> itemList = (List<Item>) application.getAttribute("itemList");
 		
 		Item item = itemList.get(index);
 		
-		@SuppressWarnings("unchecked")
-		List<Item> cartList = (List<Item>) session.getAttribute("cartList");
-		cartList.add(item);
-
+//		@SuppressWarnings("unchecked")
+//		List<Item> cartList = session.removeAttribute("cartList");
+//		cartList.remove(item);
+		
+		
 		return "itemAndCart";
 	}
 	

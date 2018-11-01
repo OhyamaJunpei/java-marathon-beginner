@@ -11,23 +11,25 @@
 
 
 商品一覧<br>
+<c:forEach var="item" items="${itemList}" varStatus="status">
 <form action="/insert/inCart" method="post">
-<c:forEach var="item" items="${itemList}">
   <c:out value="${item.name}"/> 
   <c:out value="${item.price}"/>円 
   <input type="submit" value="カートへ"><br>
-</c:forEach>
+  <input type="hidden" name="index" value="${status.index}">
 </form>
+</c:forEach>
 <hr>
 
 ショッピングカート<br>
-<form action="/delete/inCart" method="post">
-<c:forEach var="cartItem" items="${cartList}">
+<c:forEach var="cartItem" items="${cartList}" varStatus="status">
+<form action="/delete/outCart" method="post">
   <c:out value="${cartItem.name}"/> 
-  <c:out value="${cattItem.price}"/>円 
+  <c:out value="${cartItem.price}"/>円 
   <input type="submit" value="削除"><br>
-</c:forEach>
+  <input type="hidden" name="index" value="${status.index}">
 </form>
+</c:forEach>
 
 <hr>
 
