@@ -44,11 +44,13 @@ public class SearchController {
 	@RequestMapping("/output")
 	public String output(Integer id, Model model) {
 		
-		User1 user = new User1(); 
-		user = dao.load(id);
-		user.getName();
-		user.getAge();
-		user.getAddress();
+//		User1 user = new User1(); 
+//		user = dao.load(id);
+//		String name = user.getName();
+//		user.getAge();
+//		user.getAddress();
+		
+		User1 user = dao.load(id);
 		
 		model.addAttribute("user", user);
 		
